@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KWIC</title>
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!--favicon-->
+    <link rel="icon" href="/static/assets/images/favicon.png">
+    <!-- Lib & Custom Stylesheet Included -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/fontello.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/source/jquery.fancybox.css" media="screen" />
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- Start PreLoader -->
+    <div class="preloader">
+        <div class="loader cf">
+            <div class="span">
+                <div class="dashboard"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End PreLoader -->
+
+	<!--start header section -->
+	<div class="main_menu_area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="header_nav">
+					<nav class="navbar navbar-default">
+					    <!-- mobile display -->
+					    <div class="logo_flex">
+					      <button type="button" class="navbar-toggle">
+					        <span class="icon-menu">M <i class="fa fa-angle-down"></i></span>
+					      </button>
+					      <a class="logo" href="/">
+							<img src="/static/assets/images/logo.png" alt="logo">
+					      </a>
+					    </div>
+					    <div class="navbar_flex responsive_menu">
+					    	<div class="navbar-collapse">
+						      <ul class="nav navbar-nav">
+						        <li>
+						        	<a href="/">首页</a>  <span class="responsive_click_menu fa fa-angle-down"></span>
+						        </li>
+						        <li><a href="/translate/history/">历史记录</a>  <span class="responsive_click_menu fa fa-angle-down"></span>
+						        </li>
+						      </ul>
+						    </div><!-- /.navbar-collapse -->
+					    </div>
+
+					    <div class="social_icon_flex">
+					    	<div class="header-social-right">
+					    		<ul>
+					    			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					    			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					    			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					    			<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+					    		</ul>
+					    	</div><!--end .header-social-right-->
+					    </div><!--end .col-md-4-->
+                    </nav><!--end .navbar-->
+				</div><!--end .header_nav-->
+			</div><!--end .row-->
+		</div><!--end .container-fluid-->
+	</div><!--end .main_menu_area-->
+	<!--end header section -->
+
+	<!--Start Breadcrumb Section -->
+	<section class="breadcrumb_area text-center section_padding gray_bg">
+	    <ul class="breadcrumb">
+	        <li><a href="/">首页</a></li>
+	        <li> kwic</li>
+	    </ul>
+        <img class="header_slide_shape" src="/static/assets/images/header_slider_shape.png" alt="shape">
+	</section><!--end .breadcrumb_area-->
+	<!--End Breadcrumb Section -->
+
+	<!--Start Service Single Section -->
+	<section class="contact_form_area contact_form_other_style section_padding text-center">
+		<div class="container">
+{#			<div class="row">#}
+{#				<div class="col-md-8 col-md-offset-2">#}
+					<div class="contact-details">
+					    <div class="hero-section-title">
+							<i class="icon-snowflake"></i>
+							<h4>KWIC</h4>
+                            <br>
+							<h2>输入结果&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                输出结果</h2>
+						</div>
+							    <div style="width: 1137px;height: 800px" align="center">
+                                <textarea class="gray_bg" name="content" id="content" cols="30" rows="10" style="width:500px; height: 600px; float: left" readonly="readonly">{{ kwic.content }}</textarea>
+							    <textarea class="gray_bg" name="content" id="content" cols="30" rows="10" style="width:500px; height: 600px; float: right" readonly="readonly">{{ kwic.result }}</textarea>
+                                <br><br><br><br><br><br><br><br>
+                                    <form method="post" action="/translate/delete/">
+                                        <input style="display:none" type="text" name="kwic_id" class="input_half_width gray_bg" value="{{ kwic.id }}" readonly="readonly">
+                                    <button class="btn-orange" type="submit" id="submit">删除记录</button>
+                                    </form>
+                                </div>
+					</div><!--end .contact-details-->
+{#				</div><!--end .col-md-8-->#}
+{#            </div><!--end .row-->#}
+        </div><!--end .container-->
+	</section><!--end .contact_form_area-->
+	<!--end contact section -->
+
+	<!--start footer section -->
+    <footer class="footer_section section_padding">
+        <img src="/static/assets/images/shape/test_footer_shape.png" alt="Footer shape" class="footer_shape">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="footer_box">
+						<br>
+						<br>
+						<p>KWIC提供高效、便捷、放心的全新服务体验。</p>
+					</div><!--end .footer_box-->
+				</div><!--end .col-md-4-->
+
+				<div class="col-md-4 col-sm-4">
+					<div class="footer_box">
+						<h3>联系地址</h3>
+						<p>西安石油大学</p>
+						<span class="support_email"><i class="fa fa-envelope"></i> <a href="">666888@qq.com</a></span>
+						<span class="support_num"><i class="fa fa-phone-square"></i> <a href="">666 888 0000</a></span>
+					</div><!--end .footer_box-->
+				</div><!--end .col-md-4-->
+            </div><!--end .row-->
+        </div><!--end .container-->
+
+		<!-- copyright section -->
+		<div class="copyright_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<ul class="text-right">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+						</ul>
+					</div><!--end .col-md-6-->
+                </div><!--end .row-->
+            </div><!--end .container-->
+		</div><!--end .copyright_area-->
+	</footer><!--end .footer_section-->
+	<!--end footer section -->
+
+
+
+
+	<!-- Ajax Included -->
+	<script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/source/jquery.fancybox.pack.js"></script>
+    <script src="/static/assets/js/waypoint.js"></script>
+    <script src="/static/assets/js/jquery.counter.min.js"></script>
+	<script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/magnific.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+	<script src="/static/assets/js/custom.js"></script>
+</body>
+</html>
